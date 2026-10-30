@@ -23,3 +23,6 @@ docs/    PROJECT_DOCUMENTATION.md, TABLEAU_BUILD_GUIDE.md, VIDEO_SCRIPT.md
 
 ## After publishing in Tableau
 Paste the dashboard URLs into the `TABLEAU` dict in `flask_app/app.py`.
+
+## Demo video
+`docs/video/EV_Market_Demo.mp4` is a silent, captioned walkthrough built from real query output and app screenshots (script: `docs/video/make_video.py`). The Tableau segment is a placeholder card; replace it with your own screen recording. For a narrated version, follow `docs/VIDEO_SCRIPT.md`.
