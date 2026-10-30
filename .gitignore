@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+ev_market.db
+.venv/

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}EV Market Intelligence{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head><body>
+<header><div class="wrap nav">
+  <a class="brand" href="{{ url_for('home') }}">&#9889; EV Market Intelligence</a>
+  <nav>
+    {% for k, p in pages.items() %}<a href="{{ url_for('view', key=k) }}">{{ p[0] }}</a>{% endfor %}
+  </nav>
+</div></header>
+<main class="wrap">{% block content %}{% endblock %}</main>
+<footer class="wrap">Built with MySQL/SQLite, Tableau and Flask. Dataset is synthetic, for coursework.</footer>
+</body></html>

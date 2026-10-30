@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Electric Vehicle Market Intelligence</h1>
+<p class="lead">Interactive Tableau dashboards and a guided story for three decision-makers, served through Flask.</p>
+<section class="kpis">
+  <div class="kpi"><b>{{ "{:,}".format(kpi.models) }}</b><span>Vehicle records</span></div>
+  <div class="kpi"><b>{{ "{:,}".format(kpi.sales) }}</b><span>Units sold (all years)</span></div>
+  <div class="kpi"><b>{{ kpi.rng|int }} km</b><span>Average range</span></div>
+  <div class="kpi"><b>{{ kpi.rating }}</b><span>Average rating</span></div>
+</section>
+<section class="cards">
+  {% for k, p in pages.items() %}
+  <a class="card" href="{{ url_for('view', key=k) }}"><h3>{{ p[0] }}</h3><em>{{ p[1] }}</em><p>{{ p[2] }}</p></a>
+  {% endfor %}
+</section>
+{% endblock %}
